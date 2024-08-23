@@ -1,4 +1,4 @@
-lexer grammar DietLang;
+grammar DietLang;
 
 ALTURA: 'Altura';
 PESO: 'Peso';
@@ -8,7 +8,7 @@ GEN: 'Masculino' | 'Feminimo';
 TREINO: 'Treino';
 OBJETIVO: 'Objetivo';
 OBJS: 'Emagrecer' | 'Hipertrofia' | 'Manutencao';
-TIPOS_TREINOS: 'Aerobico' | 'Musculacao' | 'Powerlifting' | 'Calistenia' | 'Atletismo';
+TIPOS_EXS: 'Aerobico' | 'Musculacao' | 'Powerlifting' | 'Calistenia' | 'Atletismo';
 UNIDADES: 'min' | 's' ;
 
 NUM_INT : ('0'..'9')+
@@ -37,3 +37,19 @@ ABRECHAVE : '{'
         ;
 FECHACHAVE : '}'
         ;
+
+programa: listaInfo fichaTreinos EOF;
+
+listaInfo: info listaInfo | info;
+
+info: (ALTURA | PESO | IDADE | SEXO | OBJETIVO) DELIM (NUM_INT | NUM_REAL | GEN | OBJS);
+
+fichaTreinos: treino fichaTreinos | treino;
+
+treino: TREINO IDENT ABRECHAVE listaExs FECHACHAVE ;
+
+listaExs: listaExs exercicio | exercicio;
+
+exercicio: TIPOS_EXS IDENT | exsUnidade;
+
+exsUnidade: TIPOS_EXS IDENT (NUM_INT | NUM_REAL) UNIDADES;

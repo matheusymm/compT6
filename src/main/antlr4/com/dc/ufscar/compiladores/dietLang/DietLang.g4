@@ -3,14 +3,12 @@ lexer grammar DietLang;
 ALTURA: 'Altura';
 PESO: 'Peso';
 IDADE: 'Idade';
-SEXO: 'Masculino';
+SEXO: 'Sexo';
+GEN: 'Masculino' | 'Feminimo';
 TREINO: 'Treino';
 OBJETIVO: 'Objetivo';
-AEROBICO: 'Aerobico';
-MUSCULACO: 'Musculacao';
-POWERLIFTING: 'Powerlifting';
-CALISTENIA: 'Calistenia';
-ATLETISMO: 'Atletismo';
+OBJS: 'Emagrecer' | 'Hipertrofia' | 'Manutencao';
+TIPOS_TREINOS: 'Aerobico' | 'Musculacao' | 'Powerlifting' | 'Calistenia' | 'Atletismo';
 UNIDADES: 'min' | 's' ;
 
 NUM_INT : ('0'..'9')+
@@ -22,7 +20,6 @@ IDENT : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
          ;  
 PONTUACAO       : ',' | '..' | '<-' | '^' | '&' | '.'
         ;
-
 fragment
 ESC_SEQ : '\\\'';
 COMENTARIO
@@ -34,12 +31,9 @@ WS  :   ( ' '
         | '\n'
         ) {skip();}
     ;
-
 DELIM   :       ':'
         ;
 ABRECHAVE : '{'
         ;
 FECHACHAVE : '}'
         ;
-
-ERRO: .;

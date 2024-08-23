@@ -9,6 +9,11 @@ TREINO: 'Treino';
 OBJETIVO: 'Objetivo';
 OBJS: 'Emagrecer' | 'Hipertrofia' | 'Manutencao';
 TIPOS_EXS: 'Aerobico' | 'Musculacao' | 'Powerlifting' | 'Calistenia' | 'Atletismo';
+MUSCULOS: 'Trapezio' | 'Ombro' | 'Biceps' | 
+          'Triceps' | 'Antebraco' | 'Peito' | 
+          'Costas' | 'Abdominal' | 'Lombar' | 'Gluteo' |
+          'Quadriceps' | 'Panturilha' | 'Biceps Femoral';
+AEROBICO: 'Esteira' | 'Corrida' | 'Escada' | 'Caminhada' | 'Bicicleta' | 'Eliptico' | 'Natacao' | 'Luta';
 UNIDADES: 'min' | 's' ;
 
 NUM_INT : ('0'..'9')+

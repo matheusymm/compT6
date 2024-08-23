@@ -1,0 +1,13 @@
+Altura: 1.80
+Peso: 78
+Idade: 23
+Seo: Masculino
+Objetivo: Emagrecer
+#COMENTARIO
+Treino A {
+    Musculacao Peito
+    Musculacao Triceps
+    Calistenia Abdominal
+    Aerobico Esteira 30 min
+    Musculacao Ombro
+}

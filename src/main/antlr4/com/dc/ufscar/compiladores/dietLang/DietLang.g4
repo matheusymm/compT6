@@ -55,6 +55,6 @@ treino: TREINO IDENT ABRECHAVE listaExs FECHACHAVE ;
 
 listaExs: listaExs exercicio | exercicio;
 
-exercicio: TIPOS_EXS IDENT | exsUnidade;
+exercicio: TIPOS_EXS (MUSCULOS | AEROBICO) | exsUnidade;
 
-exsUnidade: TIPOS_EXS IDENT (NUM_INT | NUM_REAL) UNIDADES;
+exsUnidade: TIPOS_EXS AEROBICO (NUM_INT | NUM_REAL) UNIDADES;

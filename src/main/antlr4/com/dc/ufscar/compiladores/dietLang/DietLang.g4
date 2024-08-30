@@ -14,7 +14,7 @@ MUSCULOS: 'Trapezio' | 'Ombro' | 'Biceps' |
           'Costas' | 'Abdominal' | 'Lombar' | 'Gluteo' |
           'Quadriceps' | 'Panturilha' | 'Biceps Femoral';
 AEROBICO: 'Esteira' | 'Corrida' | 'Escada' | 'Caminhada' | 'Bicicleta' | 'Eliptico' | 'Natacao' | 'Luta';
-UNIDADES: 'min' | 's' ;
+UNIDADES: 'min' | 'h' ;
 
 NUM_INT : ('0'..'9')+
         ;
@@ -51,10 +51,8 @@ info: (ALTURA | PESO | IDADE | SEXO | OBJETIVO) DELIM (NUM_INT | NUM_REAL | GEN 
 
 fichaTreinos: treino fichaTreinos | treino;
 
-treino: TREINO IDENT ABRECHAVE listaExs FECHACHAVE ;
+treino: TREINO IDENT ABRECHAVE exercicio+ FECHACHAVE ;
 
-listaExs: listaExs exercicio | exercicio;
-
-exercicio: TIPOS_EXS (MUSCULOS | AEROBICO) | exsUnidade;
+exercicio: TIPOS_EXS MUSCULOS | exsUnidade;
 
 exsUnidade: TIPOS_EXS AEROBICO (NUM_INT | NUM_REAL) UNIDADES;

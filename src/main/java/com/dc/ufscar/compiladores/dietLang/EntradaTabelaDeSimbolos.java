@@ -1,6 +1,6 @@
-package com.dc.ufscar.compiladores;
+package com.dc.ufscar.compiladores.dietLang;
 
-import com.dc.ufscar.compiladores.TabelaDeSimbolos.tipoTreino;
+import com.dc.ufscar.compiladores.dietLang.TabelaDeSimbolos.tipoTreino;
 
 public class EntradaTabelaDeSimbolos {
     String nome;

@@ -1,4 +1,4 @@
-package com.dc.ufscar.compiladores;
+package com.dc.ufscar.compiladores.dietLang;
 
 import java.util.HashMap;
 

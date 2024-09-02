@@ -5,9 +5,9 @@ import java.util.List;
 
 import org.antlr.v4.runtime.Token;
 
-import com.dc.ufscar.compiladores.TabelaDeSimbolos.TipoDiet;
-import com.dc.ufscar.compiladores.TabelaDeSimbolos.TiposAerobico;
-import com.dc.ufscar.compiladores.TabelaDeSimbolos.tipoTreino;
+import com.dc.ufscar.compiladores.dietLang.TabelaDeSimbolos.TipoDiet;
+import com.dc.ufscar.compiladores.dietLang.TabelaDeSimbolos.TiposAerobico;
+import com.dc.ufscar.compiladores.dietLang.TabelaDeSimbolos.tipoTreino;
 
 public class DietLangUtils {
     static List<String> erros = new ArrayList<String>();

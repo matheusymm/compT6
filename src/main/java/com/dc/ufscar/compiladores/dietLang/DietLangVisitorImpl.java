@@ -1,7 +1,6 @@
 package com.dc.ufscar.compiladores.dietLang;
 
-import com.dc.ufscar.compiladores.TabelaDeSimbolos;
-import com.dc.ufscar.compiladores.TabelaDeSimbolos.tipoTreino;
+import com.dc.ufscar.compiladores.dietLang.TabelaDeSimbolos.tipoTreino;
 
 public class DietLangVisitorImpl extends DietLangBaseVisitor<Void> {
     // treino nao pode repetir FEITO

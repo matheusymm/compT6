@@ -36,8 +36,8 @@ public class DietLangGenerator extends DietLangBaseVisitor<Void> {
             tmb = (655 + (9.56*peso) + (1.85*altura) - (4.68*idade));
         }
         saida.append("<h1>Informações</h1>\n");
-        saida.append("<p>Taxa Metabólica Basal: " + tmb + "Kcal" + "</p>\n");
-        saida.append("<p>Gasto Total Diário: " + gasto + "Kcal" + "</p>\n");
+        saida.append("<p>Taxa Metabólica Basal: " + String.format("%.2f", tmb) + "Kcal" + "</p>\n");
+        saida.append("<p>Gasto Total Diário: " + String.format("%.2f", gasto) + "Kcal" + "</p>\n");
 
         Double carb, prot, gord;
         Double gastoObj = gasto;

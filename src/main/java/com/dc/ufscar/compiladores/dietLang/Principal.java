@@ -7,6 +7,8 @@ import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 
+import com.dc.ufscar.compiladores.GenerateFiles.Alimentos;
+import com.dc.ufscar.compiladores.GenerateFiles.ReadJson;
 import com.dc.ufscar.compiladores.dietLang.DietLangParser.ProgramaContext;
 
 public class Principal {
@@ -35,6 +37,20 @@ public class Principal {
             PrintWriter pw2 = new PrintWriter(args[1]);
             pw2.print(dg.saida.toString());
             pw2.close();
+        }
+
+        if(args[2] != null){
+            Alimentos listaAlimentos = ReadJson.readAlimentosFromJson();
+            StringBuilder listaAlimentosStr = new StringBuilder();
+            listaAlimentosStr.append("Carboidratos: ");
+            listaAlimentosStr.append(listaAlimentos.returnCarb(5).toString());
+            listaAlimentosStr.append("\nProteínas: ");
+            listaAlimentosStr.append(listaAlimentos.returnProt(3).toString());
+            listaAlimentosStr.append("\nGorduras: ");
+            listaAlimentosStr.append(listaAlimentos.returnGord(1).toString());
+            PrintWriter alimentos = new PrintWriter(args[2]);
+            alimentos.print(listaAlimentosStr.toString());
+            alimentos.close();
         }
     }
 }

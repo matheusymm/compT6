@@ -2,7 +2,6 @@ package com.dc.ufscar.compiladores.dietLang;
 
 public class DietLangGenerator extends DietLangBaseVisitor<Void> {
     StringBuilder saida;
-    // StringBuilder scriptGrafico;
     TabelaDeSimbolos tabela;
     Double altura;
     int idade;
@@ -13,7 +12,6 @@ public class DietLangGenerator extends DietLangBaseVisitor<Void> {
 
     public DietLangGenerator() {
         saida = new StringBuilder();
-        // scriptGrafico = new StringBuilder();
         this.tabela = new TabelaDeSimbolos();
     }   
 

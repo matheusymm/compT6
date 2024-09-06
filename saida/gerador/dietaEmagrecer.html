@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script><script src="graph.js"></script><title>Dieta</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script><title>Dieta</title>
 </head>
 <body>
 <h1>Informações</h1>
-<p>Taxa Metabólica Basal: 1296.37Kcal</p>
+<p>Taxa Metabólica Basal: 991.10Kcal</p>
 <p>Gasto Total Diário: 2111.85Kcal</p>
 <p>Dieta:</p>
 <p>Carboidratos: 211.19g</p>
 <p>Proteínas: 126.71g</p>
 <p>Gorduras: 37.54g</p>
-<div id="graphDiv" style="width:600px;height:400px;"></div><script>plotFunction(-0.18,78.0);</script></body>
+<div id="graphDiv" style="width:600px;height:400px;"></div><script>function plotFunction(a, b) {let xValues = [];let yValues = [];for (let x = 0; x <= 10; x += 0.1) {const y = a * x + b;if (y >= 0) {xValues.push(x);yValues.push(y);}}const trace = {x: xValues,y: yValues,type: 'scatter',mode: 'lines',line: {color: 'blue'}};Plotly.newPlot('graphDiv', [trace], {title: `Grafico da variacao do peso ( ${a}x + ${b} )`,xaxis: {title: 'Dias', range: [0, 10]},  yaxis: {title: 'Peso', range: [0, Math.max(...yValues)]} });}</script><script>plotFunction(-0.18,78.0);</script></body>
 </html>

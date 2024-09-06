@@ -4,7 +4,7 @@ ALTURA: 'Altura';
 PESO: 'Peso';
 IDADE: 'Idade';
 SEXO: 'Sexo';
-GEN: 'Masculino' | 'Feminimo';
+GEN: 'Masculino' | 'Feminino';
 TREINO: 'Treino';
 OBJETIVO: 'Objetivo';
 OBJS: 'Emagrecer' | 'Hipertrofia' | 'Manutencao';

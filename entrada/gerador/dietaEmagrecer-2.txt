@@ -1,0 +1,27 @@
+Altura: 1.80
+Peso: 121
+Idade: 30
+Sexo: Masculino
+Objetivo: Emagrecer
+#COMENTARIO
+Treino A {
+    Musculacao Peito
+    Musculacao Triceps
+    Aerobico Caminhada 20 min
+    Aerobico Bicicleta 40 min
+    Musculacao Ombro
+}
+Treino B {
+    Musculacao Gluteo
+    Musculacao Biceps Femoral
+    Calistenia Abdominal
+    Aerobico Eliptico 30 min
+    Musculacao Ombro
+}
+Treino C {
+    Musculacao Peito
+    Musculacao Triceps
+    Calistenia Antebraco
+    Aerobico Luta 1 h
+    Musculacao Ombro
+}

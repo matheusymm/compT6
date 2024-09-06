@@ -34,11 +34,8 @@ public class Principal {
         if(DietLangUtils.erros.isEmpty()) {
             DietLangGenerator dg = new DietLangGenerator();
             dg.visitPrograma(arvore);
-            PrintWriter graph = new PrintWriter("./graph.js");
             PrintWriter pw2 = new PrintWriter(args[1]);
             pw2.print(dg.saida.toString());
-            graph.print(dg.scriptGrafico.toString());
-            graph.close();
             pw2.close();
         }
 

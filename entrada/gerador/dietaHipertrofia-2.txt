@@ -1,0 +1,27 @@
+Altura: 1.80
+Peso: 65
+Idade: 23
+Sexo: Masculino
+Objetivo: Hipertrofia
+#COMENTARIO
+Treino A {
+    Musculacao Abdominal
+    Musculacao Ombro
+    Aerobico Luta 30 min
+    Aerobico Esteira 1 h
+    Musculacao Antebraco
+}
+Treino B {
+    Musculacao Costas
+    Musculacao Biceps
+    Calistenia Abdominal
+    Aerobico Esteira 30 min
+    Musculacao Lombar
+}
+Treino C {
+    Musculacao Peito
+    Musculacao Triceps
+    Calistenia Abdominal
+    Aerobico Esteira 30 min
+    Musculacao Panturilha
+}

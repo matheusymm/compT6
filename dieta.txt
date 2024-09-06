@@ -1,0 +1,3 @@
+Carboidratos: [Cenoura, Cuscuz, Uva, Macarrão, Tapioca]
+Proteínas: [Atum, Castanha de caju, Grão-de-bico]
+Gorduras: [Lombo de porco]

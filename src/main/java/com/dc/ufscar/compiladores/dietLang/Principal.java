@@ -33,11 +33,11 @@ public class Principal {
             DietLangGenerator dg = new DietLangGenerator();
             dg.visitPrograma(arvore);
             // TODO: tratar onde salva o script do gráfico
-            PrintWriter graph = new PrintWriter(args[1]);
+            // PrintWriter graph = new PrintWriter(args[1]);
             PrintWriter pw2 = new PrintWriter(args[1]);
             pw2.print(dg.saida.toString());
-            graph.print(dg.scriptGrafico.toString());
-            graph.close();
+            // graph.print(dg.scriptGrafico.toString());
+            // graph.close();
             pw2.close();
         }
     }

@@ -2,7 +2,7 @@ package com.dc.ufscar.compiladores.dietLang;
 
 public class DietLangGenerator extends DietLangBaseVisitor<Void> {
     StringBuilder saida;
-    StringBuilder scriptGrafico;
+    // StringBuilder scriptGrafico;
     TabelaDeSimbolos tabela;
     Double altura;
     int idade;
@@ -13,7 +13,7 @@ public class DietLangGenerator extends DietLangBaseVisitor<Void> {
 
     public DietLangGenerator() {
         saida = new StringBuilder();
-        scriptGrafico = new StringBuilder();
+        // scriptGrafico = new StringBuilder();
         this.tabela = new TabelaDeSimbolos();
     }   
 
@@ -23,14 +23,13 @@ public class DietLangGenerator extends DietLangBaseVisitor<Void> {
         saida.append("<html>\n");
         saida.append("<head>\n");
         saida.append("<script src=\"https://cdn.plot.ly/plotly-latest.min.js\"></script>");
-        saida.append("<script src=\"graph.js\"></script>");
         saida.append("<title>Dieta</title>\n");
         saida.append("</head>\n");
         saida.append("<body>\n");
         Void retorno = super.visitPrograma(ctx);
 
         Double tmb;
-        if(sexo.equals("MASCULINO")) {
+        if(sexo.equals("Masculino")) {
             tmb = (66 + (13.75*peso) + (5*altura) - (6.8*idade));
         } else {
             tmb = (655 + (9.56*peso) + (1.85*altura) - (4.68*idade));
@@ -60,8 +59,8 @@ public class DietLangGenerator extends DietLangBaseVisitor<Void> {
         saida.append("<p>Proteínas: " + String.format("%.2f", prot) + "g" + "</p>\n");
         saida.append("<p>Gorduras: " + String.format("%.2f", gord) + "g" + "</p>\n");
         saida.append("<div id=\"graphDiv\" style=\"width:600px;height:400px;\"></div>");
+        saida.append("<script>function plotFunction(a, b) {let xValues = [];let yValues = [];for (let x = 0; x <= 10; x += 0.1) {const y = a * x + b;if (y >= 0) {xValues.push(x);yValues.push(y);}}const trace = {x: xValues,y: yValues,type: 'scatter',mode: 'lines',line: {color: 'blue'}};Plotly.newPlot('graphDiv', [trace], {title: `Grafico da variacao do peso ( ${a}x + ${b} )`,xaxis: {title: 'Dias', range: [0, 10]},  yaxis: {title: 'Peso', range: [0, Math.max(...yValues)]} });}</script>");
         saida.append("<script>plotFunction(" + String.format("%.2f",a) + "," + b + ");</script>");
-        scriptGrafico.append("function plotFunction(a, b) {let xValues = [];let yValues = [];for (let x = 0; x <= 10; x += 0.1) {const y = a * x + b;if (y >= 0) {xValues.push(x);yValues.push(y);}}const trace = {x: xValues,y: yValues,type: 'scatter',mode: 'lines',line: {color: 'blue'}};Plotly.newPlot('graphDiv', [trace], {title: `Grafico da variacao do peso ( ${a}x + ${b} )`,xaxis: {title: 'Dias', range: [0, 10]},  yaxis: {title: 'Peso', range: [0, Math.max(...yValues)]} });}");
         saida.append("</body>\n");
         saida.append("</html>\n");
         return retorno;

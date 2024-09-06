@@ -70,8 +70,6 @@ public class DietLangUtils {
         switch (tipo.toUpperCase()) {
             case "AEROBICO":
                 return tipoTreino.AEROBICO;
-            case "ATLETISMO":
-                return tipoTreino.ATLETISMO;
             case "CALISTENIA":
                 return tipoTreino.CALISTENIA;
             case "MUSCULACAO":
@@ -108,13 +106,49 @@ public class DietLangUtils {
         }
     }
 
+    public static double getCalExercicio(String nome) {
+        switch(nome) {
+            case "CALISTENIA":
+                return 5;
+            case "MUSCULACAO":
+                return 4.5;
+            case "POWERLIFTING":
+                return 6;
+            default:
+                return 0;
+        }
+    }
+
+    public static double getCalTiposAerobico(String nome) {
+        switch (nome) {
+            case "ESTEIRA":
+                return 6.6;
+            case "CORRIDA":
+                return 11.5;
+            case "ESCADA":
+                return 8.5;
+            case "CAMINHADA":
+                return 3.8;
+            case "BICICLETA":
+                return 6;
+            case "ELIPTICO":
+                return 6.5;
+            case "NATACAO":
+                return 8.5;
+            case "LUTA":
+                return 12;
+            default:
+                return 0;
+        }
+    }
+
     @Deprecated
     public static boolean verificarTiposCompativeis(String nome, tipoTreino tipTreino) {
         TiposAerobico tipo = DietLangUtils.getTiposAerobico(nome);
-        if (tipo != null && !(tipTreino == tipoTreino.AEROBICO || tipoTreino.ATLETISMO == tipTreino)) {
+        if (tipo != null && !(tipTreino == tipoTreino.AEROBICO)) {
             return false;
         }
-        if (tipo == null && !(tipTreino != tipoTreino.AEROBICO && tipoTreino.ATLETISMO != tipTreino))
+        if (tipo == null && !(tipTreino != tipoTreino.AEROBICO))
             return false;
         return true;
     }

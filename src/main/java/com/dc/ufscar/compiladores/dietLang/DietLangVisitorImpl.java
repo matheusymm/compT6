@@ -18,7 +18,7 @@ public class DietLangVisitorImpl extends DietLangBaseVisitor<Void> {
         TREINOS = new TabelaDeSimbolos();
         Void retorno = super.visitPrograma(ctx);
 
-        System.out.println("Tempo: " + QTDAEROBICO);
+        // System.out.println("Tempo: " + QTDAEROBICO);
         // System.out.println("N treinos: " + TREINOS.getHashMapSize());
         // TREINOS.printTreinos();
         if (TREINOS.getHashMapSize() < 3)

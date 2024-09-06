@@ -20,7 +20,6 @@ public class TabelaDeSimbolos {
         MUSCULACAO,
         POWERLIFTING,
         CALISTENIA,
-        ATLETISMO,
     }
 
     public enum TipoDiet {

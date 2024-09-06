@@ -8,7 +8,7 @@ GEN: 'Masculino' | 'Feminimo';
 TREINO: 'Treino';
 OBJETIVO: 'Objetivo';
 OBJS: 'Emagrecer' | 'Hipertrofia' | 'Manutencao';
-TIPOS_EXS: 'Aerobico' | 'Musculacao' | 'Powerlifting' | 'Calistenia' | 'Atletismo';
+TIPOS_EXS: 'Aerobico' | 'Musculacao' | 'Powerlifting' | 'Calistenia';
 MUSCULOS: 'Trapezio' | 'Ombro' | 'Biceps' | 
           'Triceps' | 'Antebraco' | 'Peito' | 
           'Costas' | 'Abdominal' | 'Lombar' | 'Gluteo' |

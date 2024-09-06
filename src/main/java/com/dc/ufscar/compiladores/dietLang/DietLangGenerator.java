@@ -36,19 +36,19 @@ public class DietLangGenerator extends DietLangBaseVisitor<Void> {
             tmb = (655 + (9.56*peso) + (1.85*altura) - (4.68*idade));
         }
         saida.append("<h1>Informações</h1>\n");
-        saida.append("<p>Taxa Metabólica Basal: " + tmb + "cal" + "</p>\n");
-        saida.append("<p>Gasto Total Diário: " + gasto + "cal" + "</p>\n");
+        saida.append("<p>Taxa Metabólica Basal: " + tmb + "Kcal" + "</p>\n");
+        saida.append("<p>Gasto Total Diário: " + gasto + "Kcal" + "</p>\n");
 
         Double carb, prot, gord;
         Double gastoObj = gasto;
         Double a = .0;
         Double b = peso;
-        if(objetivo.equals("HIPERTROFIA")) {
+        if(objetivo.equals("Hipertrofia")) {
             gastoObj += 0.2*gastoObj;
-            a = 0.8*(-gastoObj/7700);
-        } else if(objetivo.equals("EMAGRECER")) {
-            gastoObj -= 0.2*gastoObj;
             a = 0.8*(gastoObj/7700);
+        } else if(objetivo.equals("Emagrecer")) {
+            gastoObj -= 0.2*gastoObj;
+            a = 0.8*((-1)*gastoObj/7700);
         } else {
             a = 1*(gastoObj/7700);
         }
@@ -56,11 +56,11 @@ public class DietLangGenerator extends DietLangBaseVisitor<Void> {
         prot = (gastoObj*0.3)/4;
         gord = (gastoObj*0.2)/9;
         saida.append("<p>Dieta:</p>\n");
-        saida.append("<p>Carboidratos: " + carb + "g" + "</p>\n");
-        saida.append("<p>Proteínas: " + prot + "g" + "</p>\n");
-        saida.append("<p>Gorduras: " + gord + "g" + "</p>\n");
+        saida.append("<p>Carboidratos: " + String.format("%.2f", carb) + "g" + "</p>\n");
+        saida.append("<p>Proteínas: " + String.format("%.2f", prot) + "g" + "</p>\n");
+        saida.append("<p>Gorduras: " + String.format("%.2f", gord) + "g" + "</p>\n");
         saida.append("<div id=\"graphDiv\" style=\"width:600px;height:400px;\"></div>");
-        saida.append("<script>plotFunction(" + a + "," + b + ");</script>");
+        saida.append("<script>plotFunction(" + String.format("%.2f",a) + "," + b + ");</script>");
         scriptGrafico.append("function plotFunction(a, b) {let xValues = [];let yValues = [];for (let x = 0; x <= 10; x += 0.1) {const y = a * x + b;if (y >= 0) {xValues.push(x);yValues.push(y);}}const trace = {x: xValues,y: yValues,type: 'scatter',mode: 'lines',line: {color: 'blue'}};Plotly.newPlot('graphDiv', [trace], {title: `Grafico da variacao do peso ( ${a}x + ${b} )`,xaxis: {title: 'Dias', range: [0, 10]},  yaxis: {title: 'Peso', range: [0, Math.max(...yValues)]} });}");
         saida.append("</body>\n");
         saida.append("</html>\n");
@@ -103,7 +103,6 @@ public class DietLangGenerator extends DietLangBaseVisitor<Void> {
                 gasto += DietLangUtils.getCalExercicio(tipo)*peso*0.25;
             }
         }
-        Void retorno = super.visitTreino(ctx);
-        return retorno;
+        return super.visitTreino(ctx);
     }
 }

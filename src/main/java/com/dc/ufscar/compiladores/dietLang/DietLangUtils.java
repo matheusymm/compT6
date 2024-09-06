@@ -84,7 +84,7 @@ public class DietLangUtils {
     }
 
     public static TiposAerobico getTiposAerobico(String nome) {
-        switch (nome) {
+        switch (nome.toUpperCase()) {
             case "ESTEIRA":
                 return TiposAerobico.ESTEIRA;
             case "CORRIDA":
@@ -107,7 +107,7 @@ public class DietLangUtils {
     }
 
     public static double getCalExercicio(String nome) {
-        switch(nome) {
+        switch(nome.toUpperCase()) {
             case "CALISTENIA":
                 return 5;
             case "MUSCULACAO":
@@ -120,7 +120,7 @@ public class DietLangUtils {
     }
 
     public static double getCalTiposAerobico(String nome) {
-        switch (nome) {
+        switch (nome.toUpperCase()) {
             case "ESTEIRA":
                 return 6.6;
             case "CORRIDA":

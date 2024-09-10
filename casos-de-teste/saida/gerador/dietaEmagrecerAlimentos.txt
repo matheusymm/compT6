@@ -1,0 +1,3 @@
+Carboidratos: [Ervilha, Grão-de-bico, Aveia, Pêra, Farinha de trigo]
+Proteínas: [Grão-de-bico, Ovo, Amêndoas]
+Gorduras: [Castanha de caju]

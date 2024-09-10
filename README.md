@@ -50,7 +50,9 @@ Treino C {
 }
 ```
 - Saída:
+
 ![image.png](./img/image.png)
+
 ```
 Carboidratos: [Banana, Feijão, Arroz, Quinoa, Pêra]
 Proteínas: [Salmão, Filé de frango, Leite]
@@ -73,4 +75,4 @@ java -jar ./target/dietLang-1.0-SNAPSHOT-jar-with-dependencies.jar ~/caminho-par
 ```
 **Obs.:** O `caminho-para-cardapio` é opcional.
 
-**Link para video explicativo:**
+**Link para video explicativo:** https://drive.google.com/file/d/1ijegDqTMx1fjBsa90mr3_NZt8e9RteGI/view

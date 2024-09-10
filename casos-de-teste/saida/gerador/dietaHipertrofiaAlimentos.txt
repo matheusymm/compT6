@@ -1,0 +1,3 @@
+Carboidratos: [Mandioca, Cenoura, Farinha de trigo, Feijão, Pêra]
+Proteínas: [Filé de frango, Atum, Lentilha]
+Gorduras: [Amêndoas]

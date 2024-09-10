@@ -39,7 +39,7 @@ public class Principal {
             pw2.close();
         }
 
-        if(args[2] != null){
+        if(args.length > 2 && args[2] != null){
             Alimentos listaAlimentos = ReadJson.readAlimentosFromJson();
             StringBuilder listaAlimentosStr = new StringBuilder();
             listaAlimentosStr.append("Carboidratos: ");

@@ -1,0 +1,3 @@
+Carboidratos: [Banana, Feijão, Arroz, Quinoa, Pêra]
+Proteínas: [Salmão, Filé de frango, Leite]
+Gorduras: [Queijo]
